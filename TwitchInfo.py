@@ -33,6 +33,15 @@ def checkUser():
     except Exception as e:
         return False
 
+def getUserlogin():
+    try:
+        if 'data' in jsondata:
+            if jsondata["data"][0]["type"] != "":
+               userlogin = jsondata["data"][0]["user_login"]
+               return userlogin
+    except:
+        return False
+
 def getTitle():
     try:
         if 'data' in jsondata:
